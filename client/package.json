@@ -5,9 +5,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "codegen": "graphql-codegen"
   },
   "dependencies": {
+    "@graphql-codegen/cli": "^2.13.12",
+    "@graphql-codegen/typed-document-node": "^2.3.7",
+    "@graphql-codegen/typescript": "^2.8.2",
+    "@graphql-codegen/typescript-operations": "^2.5.7",
     "graphql": "^16.6.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

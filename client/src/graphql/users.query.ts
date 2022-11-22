@@ -1,15 +1,13 @@
 import { gql } from "urql";
 
 export const GetUsers = gql`
-  {
+  query GetUsers {
     users {
       id
       name
       notes {
-        id
         message
         createdAt
-        updatedAt
       }
     }
   }
