@@ -1,8 +1,14 @@
 import { createServer } from "node:http";
 import { createYoga } from "@graphql-yoga/node";
+import { prisma } from "./db";
 import { schema } from "./schema";
 
-const yoga = createYoga({ schema });
+const yoga = createYoga({
+  schema,
+  context: {
+    prisma,
+  },
+});
 
 const server = createServer(yoga);
 
